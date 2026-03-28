@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Smart Map Pro++</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+
+    <!-- Marker Cluster -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.css"/>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+
+    <div class="sidebar">
+        <h2>Smart Map Pro++</h2>
+
+        <input id="search" placeholder="Search location...">
+        <button onclick="searchPlace()">Search</button>
+
+        <input id="stops" placeholder="Stops (A,B,C)">
+        <button onclick="multiRoute()">Multi Route</button>
+
+        <button onclick="getLocation()">📍 My Location</button>
+        <button onclick="startTracking()">📡 Live Tracking</button>
+
+        <button onclick="getRoute()">🧭 Route</button>
+
+        <select onchange="findNearby(this.value)">
+            <option value="">Nearby</option>
+            <option value="restaurant">Restaurants</option>
+            <option value="hospital">Hospitals</option>
+            <option value="atm">ATM</option>
+        </select>
+
+        <button onclick="savePlace()">⭐ Save</button>
+        <button onclick="loadSaved()">📂 Load</button>
+
+        <button onclick="toggleDarkMode()">🌙 Dark Mode</button>
+        <button onclick="clearMap()">🧹 Clear</button>
+
+        <div id="info"></div>
+    </div>
+
+    <div id="map"></div>
+
+</div>
+
+<!-- Scripts -->
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script src="https://unpkg.com/leaflet.markercluster/dist/leaflet.markercluster.js"></script>
+
+<script src="script.js"></script>
+
+</body>
+</html>

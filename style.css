@@ -1,0 +1,65 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.app {
+    display: flex;
+}
+
+.sidebar {
+    width: 280px;
+    padding: 15px;
+    background: #1e1e2f;
+    color: white;
+    height: 100vh;
+}
+
+.sidebar h2 {
+    text-align: center;
+}
+
+.sidebar input,
+.sidebar select,
+.sidebar button {
+    width: 100%;
+    padding: 10px;
+    margin: 6px 0;
+    border: none;
+    border-radius: 6px;
+}
+
+.sidebar button {
+    background: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+
+.sidebar button:hover {
+    background: #45a049;
+}
+
+#map {
+    height: 100vh;
+    width: 100%;
+}
+
+#info {
+    margin-top: 10px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .app {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+    }
+
+    #map {
+        height: 80vh;
+    }
+}
